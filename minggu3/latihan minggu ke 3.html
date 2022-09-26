@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GALIH~Multimedia HTML 5</title>
+    </head>
+    <body>
+        <h2 align="center">Multimedia HTML 5 video</h2>
+        <p>
+            <div style="text-align:center">
+                <button onclick="PlayVid()" type="button">Play Video</button>
+                <button onclick="PauseVid()" type="button">Pause Video</button>
+                <button onclick="MakeBig()" type="button">Big Size</button>
+                <button onclick="MakeSmall()" type="button">Small Size</button>
+                <button onclick="MakeNormal()" type="button">Normal Size</button>
+                <button onclick="Replay()" type="button">Replay Video</button>
+                <br></br>
+                <video id="MyVideo" width="420" height="250" controls="true">
+                    <source src="cute.mp4" type="video/mp4">
+                    Video file not support
+                </video>
+            </div>
+        </p> 
+    </body>
+    <script>
+        var vid = document.getElementById("MyVideo");
+
+        function PlayVid(){
+            vid.play();
+        }
+        function PauseVid(){
+            vid.pause();
+        }
+        function MakeBig(){
+            vid.width = 550;
+            vid.height = 300;
+        }
+        function MakeSmall(){
+            vid.width = 320;
+            vid.height = 200;
+        }
+        function MakeNormal(){
+            vid.width = 420;
+            vid.height = 250;
+        }
+        function Replay(){
+            vid.currentTime = '0';
+            vid.play()
+        }
+    </script>
+</html>
